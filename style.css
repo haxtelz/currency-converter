@@ -75,11 +75,11 @@ header p {
 
 .amount-input input {
     padding: 1rem;
-    border: 2px solid #e1e8ed;
-    border-radius: 12px;
-    font-size: 1.1rem;
+        border: 2px solid #38b2ac;
+        border-radius: 12px;
+        font-size: 1.1rem;
     transition: all 0.3s ease;
-    background: #f8fafc;
+        background: #e0f7fa;
 }
 
 .amount-input input:focus {
@@ -120,9 +120,6 @@ header p {
 
 .from-currency select, .to-currency select {
     padding: 1rem;
-    border: 2px solid #e1e8ed;
-    border-radius: 12px;
-    font-size: 1rem;
     background: #f8fafc;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -144,7 +141,7 @@ header p {
 }
 
 .swap-button button {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #38b2ac, #ff9800);
     color: white;
     border: none;
     border-radius: 50%;
@@ -160,12 +157,12 @@ header p {
 
 .swap-button button:hover {
     transform: rotate(180deg) scale(1.1);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3);
 }
 
 /* Convert button */
 .convert-button {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #38b2ac, #ff9800);
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -179,7 +176,7 @@ header p {
 
 .convert-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 25px rgba(255, 152, 0, 0.3);
 }
 
 .convert-button:active {
@@ -188,11 +185,11 @@ header p {
 
 /* Result section */
 .result-section {
-    background: linear-gradient(135deg, #f8fafc, #e1e8ed);
+    background: linear-gradient(135deg, #e0f7fa, #fff3e0);
     padding: 2rem;
     border-radius: 16px;
     text-align: center;
-    border: 2px solid #e1e8ed;
+    border: 2px solid #38b2ac;
 }
 
 .result {
@@ -203,7 +200,7 @@ header p {
 }
 
 .result-amount {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #38b2ac, #ff9800);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -238,8 +235,8 @@ header p {
 .spinner {
     width: 24px;
     height: 24px;
-    border: 3px solid #e1e8ed;
-    border-top: 3px solid #667eea;
+    border: 3px solid #e0f7fa;
+    border-top: 3px solid #ff9800;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
@@ -251,12 +248,12 @@ header p {
 
 /* Error state */
 .error {
-    background: #fee;
-    border: 2px solid #fcc;
+    background: #ffe0b2;
+    border: 2px solid #ff9800;
     border-radius: 12px;
     padding: 1.5rem;
     text-align: center;
-    color: #c33;
+    color: #ff9800;
 }
 
 .error-message {
@@ -265,7 +262,7 @@ header p {
 }
 
 .retry-button {
-    background: #c33;
+    background: #ff9800;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -275,7 +272,7 @@ header p {
 }
 
 .retry-button:hover {
-    background: #a22;
+    background: #38b2ac;
     transform: translateY(-1px);
 }
 
@@ -290,7 +287,7 @@ footer {
 }
 
 footer a {
-    color: #667eea;
+    color: #38b2ac;
     text-decoration: none;
 }
 
