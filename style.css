@@ -1,0 +1,337 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    margin: 1rem;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Converter main section */
+.converter {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Input section */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.amount-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.amount-input label {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.amount-input input {
+    padding: 1rem;
+    border: 2px solid #e1e8ed;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+}
+
+.amount-input input:focus {
+    outline: none;
+    border-color: #667eea;
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+/* Currency selectors */
+.currency-selectors {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1rem;
+    align-items: end;
+}
+
+.from-currency, .to-currency {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.from-currency label, .to-currency label {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.from-currency select, .to-currency select {
+    padding: 1rem;
+    border: 2px solid #e1e8ed;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: #f8fafc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.from-currency select:focus, .to-currency select:focus {
+    outline: none;
+    border-color: #667eea;
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.swap-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.5rem;
+}
+
+.swap-button button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swap-button button:hover {
+    transform: rotate(180deg) scale(1.1);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Convert button */
+.convert-button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.convert-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.convert-button:active {
+    transform: translateY(0);
+}
+
+/* Result section */
+.result-section {
+    background: linear-gradient(135deg, #f8fafc, #e1e8ed);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 2px solid #e1e8ed;
+}
+
+.result {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.result-amount {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.result-currency {
+    color: #666;
+    margin-left: 0.5rem;
+}
+
+.exchange-rate {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.last-updated {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+/* Loading state */
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    color: #666;
+}
+
+.spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #e1e8ed;
+    border-top: 3px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error state */
+.error {
+    background: #fee;
+    border: 2px solid #fcc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    color: #c33;
+}
+
+.error-message {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.retry-button {
+    background: #c33;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.retry-button:hover {
+    background: #a22;
+    transform: translateY(-1px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e1e8ed;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+footer a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem;
+        margin: 0.5rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .currency-selectors {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .swap-button {
+        order: 3;
+        padding-top: 0;
+    }
+    
+    .swap-button button {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .result {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .result {
+        font-size: 1.8rem;
+    }
+}
